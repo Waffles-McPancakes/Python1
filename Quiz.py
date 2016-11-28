@@ -1,3 +1,4 @@
+#score Variable
 score = 0
 
 
@@ -79,10 +80,23 @@ def sadface():
 
 
 
+def title():
+    print("""
+ ██████╗ ███████╗███╗   ██╗███████╗██████╗  █████╗ ██╗         ██╗  ██╗███╗   ██╗ ██████╗ ██╗    ██╗██╗     ███████╗██████╗  ██████╗ ███████╗     ██████╗ ██╗   ██╗██╗███████╗
+██╔════╝ ██╔════╝████╗  ██║██╔════╝██╔══██╗██╔══██╗██║         ██║ ██╔╝████╗  ██║██╔═══██╗██║    ██║██║     ██╔════╝██╔══██╗██╔════╝ ██╔════╝    ██╔═══██╗██║   ██║██║╚══███╔╝
+██║  ███╗█████╗  ██╔██╗ ██║█████╗  ██████╔╝███████║██║         █████╔╝ ██╔██╗ ██║██║   ██║██║ █╗ ██║██║     █████╗  ██║  ██║██║  ███╗█████╗      ██║   ██║██║   ██║██║  ███╔╝
+██║   ██║██╔══╝  ██║╚██╗██║██╔══╝  ██╔══██╗██╔══██║██║         ██╔═██╗ ██║╚██╗██║██║   ██║██║███╗██║██║     ██╔══╝  ██║  ██║██║   ██║██╔══╝      ██║▄▄ ██║██║   ██║██║ ███╔╝
+╚██████╔╝███████╗██║ ╚████║███████╗██║  ██║██║  ██║███████╗    ██║  ██╗██║ ╚████║╚██████╔╝╚███╔███╔╝███████╗███████╗██████╔╝╚██████╔╝███████╗    ╚██████╔╝╚██████╔╝██║███████╗
+ ╚═════╝ ╚══════╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝    ╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝  ╚══╝╚══╝ ╚══════╝╚══════╝╚═════╝  ╚═════╝ ╚══════╝     ╚══▀▀═╝  ╚═════╝ ╚═╝╚══════╝
+
+    """)
+
+
+#restart function
 def restart():
     score = 0
+    print(title())
     start = input("""
-This is a quiz.
 Do you want to play?
 
 
@@ -366,7 +380,9 @@ d. Because Morty's brainwaves camouflage Rick's brainwaves
                                                                             print("your score is",score)
 
 
+#Start of the code
 
+print(title())
 start = input("""
 This is a quiz.
 Do you want to play?
@@ -380,6 +396,11 @@ if start != "yes":
     print(sadface())
 
 if start == "yes":
+    print("""This is how to play:
+type in the letter answer that you want to answer in lower case.
+For example if you wanted to answer a you would type 'a'.
+then once you have typed in the letter you wish to choose press enter.
+If it is correct you will move on to the next question, if it is wrong it will repeat the question until it is right. """)
     q1 = input("""Who is Hermann Göring?
 a. A German engineer
 b. Hitler's second command
